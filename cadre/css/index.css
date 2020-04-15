@@ -1,0 +1,99 @@
+html{
+	background: #dbccb5;
+	background-size: contain; 
+}
+header{
+	margin-bottom: 20px;
+}
+.nav{
+	background: #72d0eb;
+}
+.ans{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.outer{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+#sbutton {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 15px;
+  font-style:italic;
+  background: #233642;
+  text-decoration: none;
+}
+#sbutton:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 97%;
+  border-radius: 25px;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-left:15px;
+  margin-right:15px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  counter-reset: rowNumber;
+
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+
+
+#myTable tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+
+#myTable tr {
+  counter-increment: rowNumber;
+  start-from:secondRow;
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
