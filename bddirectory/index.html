@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bangladesh Directory</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="bdstyle.css">
+
+    <script> var host = 'http://123.49.47.23/edirectory/'; </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="bdscript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+</head>
+
+<body>
+    <header class="home-view" id="header1">
+        <div class="container-fluid text-center">
+            <div class="pull-left">
+                <img src="icon.png" width="35px" height="35px">
+            </div>
+            <span class="title">বাংলাদেশ ডিরেক্টরি</span>
+            <div class="pull-right">
+                <img src="bd.png">
+            </div>
+        </div>
+    </header>
+
+    <header class="home-view" id="header2">
+        <div class="row">
+            <div class="col-2">
+                <div class="back-btn" style="padding-left:10px; color: #000; cursor: pointer;">
+                    <i class="fa fa-arrow-left" id="backcc"></i>
+                </div>
+            </div>
+            <div class="col-8">
+                <span class="title">বাংলাদেশ</span>
+            </div>
+            <div class="col-2" align="right">
+                <div style="padding-right: 10px; position: relative;">
+                    <span id="menu-bar"><i class="fa fa-bars"></i></span>
+                    <span style="display: none;" id="cross-bar"><i class="fa fa-times"></i></span>
+
+                    <div class="mega-menu">
+                        <ul>
+                            <li><a href="index.html" id="home"> <i class="fa fa-home fa-6x"></i>Home</a></li>
+                            <li><a href="clearcatche:" id="cashclear"><i class="fa fa-eraser fa-6x" aria-hidden="true"></i>Clean Cache</a></li>
+                            <li><span id="refresh" style="cursor: pointer;font-size: 18px;color: #006699"><i class="fa fa-refresh fa-6x" aria-hidden="true"></i>Refresh</span></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="main-body">
+        <div id="home-list">
+            <ul class="home-view list">
+
+            	<div class="row">
+    				<div class="col-12">
+    				  	<li data-type="home" data-id="ministry" style="background-color: #1abc9c;color:white;text-align:center;padding-top: 40px;padding-bottom: 35px;font-size:22px">সকল মন্ত্রণালয়</li>
+    				</div>
+				</div>
+
+                <div class="row">
+                  <div class="col-6">
+                    <li data-type="home" data-id="2" data-domain="www.chittagongdiv.gov.bd"  style="background-color: #2ecc71;color:white;text-align:center;padding-top: 40px;padding-bottom: 35px;font-size:22px">চট্টগ্রাম বিভাগ</li>
+                  </div>  
+                  <div class="col-6">
+                    <li data-type="home" data-id="5" data-domain="www.rajshahidiv.gov.bd" style="background-color: #3498db;color:white;text-align:center;padding-top: 40px;padding-bottom: 35px;font-size:22px">রাজশাহী বিভাগ</li>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6">
+                    <li data-type="home" data-id="4" data-domain="www.khulnadiv.gov.bd" style="background-color: #9b59b6;color:white;text-align:center;padding-top: 40px;padding-bottom: 35px;font-size:22px">খুলনা বিভাগ</li>
+                  </div>  
+                  <div class="col-6">
+                    <li data-type="home" data-id="1" data-domain="www.barisaldiv.gov.bd" style="background-color: #34495e;color:white;text-align:center;padding-top: 40px;padding-bottom: 35px;font-size:22px">বরিশাল বিভাগ</li>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6">
+                    <li data-type="home" data-id="7" data-domain="www.sylhetdiv.gov.bd" style="background-color: #16a085;color:white;text-align:center;padding-top: 40px;padding-bottom: 35px;font-size:22px">সিলেট বিভাগ</li>
+                  </div>  
+                  <div class="col-6">
+                    <li data-type="home" data-id="3" data-domain="www.dhakadiv.gov.bd" style="background-color: #27ae60;color:white;text-align:center;padding-top: 40px;padding-bottom: 35px;font-size:22px">ঢাকা বিভাগ</li>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6">
+                    <li data-type="home" data-id="6" data-domain="www.rangpurdiv.gov.bd" style="background-color: #2980b9;color:white;text-align:center;padding-top: 40px;padding-bottom: 35px;font-size:22px">রংপুর বিভাগ</li>
+                  </div>  
+                  <div class="col-6">
+                    <li data-type="home" data-id="8" data-domain="www.mymensinghdiv.gov.bd" style="background-color: #8e44ad;color:white;text-align:center;padding-top: 40px;padding-bottom: 35px;font-size:22px">ময়মনসিংহ বিভাগ</li>
+                  </div>
+                </div>    	   
+            </ul>
+        </div>
+
+        <div id="ministry-list"></div>
+        <div id="ministry-child-list"></div>
+        <div id="ministry-employees-child-list"></div>
+        <div id="ministry-employees-list"></div>
+        <div id="ministry-employee-child-list"></div>
+
+        <div id="division-list"></div>
+        <div id="division-officers-list"></div>
+        <div id="division-officer-list"></div>
+
+        <div id="district-list"></div>
+        <div id="district-officers-list"></div>
+        <div id="district-officer-list"></div>
+
+        <div id="upazila-list"></div>
+        <div id="upazila-officers-list"></div>
+        <div id="upazila-officer-list"></div>
+
+        <div id="union-list"></div>
+        <div id="union-officers-list"></div>
+        <div id="union-officer-list"></div>
+        
+        <div id="show-search-information-list"></div>
+        <div id="show-search-officer-information-list"></div>
+    </div>
+    
+
+    <div id="back_shade">    
+    </div>
+
+    <div id="loading">
+        <div>
+            <i class="fa fa-spinner fa-spin"></i><span>Please Wait...</span>
+        </div>
+    </div>
+
+    <div class="search_officer">
+         <button id="office_link">হোম পেজ</button> 
+         <button id="search_link">খোঁজ করুন</button>
+    </div>
+
+
+    <div id="search_option">
+      <div class="form-group has-feedback has-search">
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+        <input type="text" class="form-control" placeholder="Type here..." id="search_key">
+      </div> 
+      <button id="search_button">খোঁজ করুন</button>
+    </div> 
+
+    <footer>
+        <div class="container-fluid text-center">
+            <div>
+                Digital Krishi Diary <img src="icon.png" width="25px" height="25px">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
