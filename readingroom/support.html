@@ -14,6 +14,22 @@
   cursor: pointer;
 }
 
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
 .button1 {
   background-color: white; 
   color: black; 
@@ -34,7 +50,7 @@
 function myFunction0() {
   var x = document.getElementById("myDIV");
   if (x.innerHTML === "") {
-    x.innerHTML = "Call us: +8801770007177 <br> email: gentletouch2021@gmail.com";
+    x.innerHTML = "Call us: <a href='tel:+8801770007177'>+8801770007177</a> <br> email: <a href='mailto:gentletouch2021@gmail.com'>gentletouch2021@gmail.com</a>";
   } else {
     x.innerHTML = "";
   }
