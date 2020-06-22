@@ -1,0 +1,58 @@
+<head>
+<title>Support us</title>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+
+</style>
+</head>
+<h2 style="text-align: center;"><span style="text-decoration: underline; color: #800000;">Support Us</span></h2>
+<p style="text-align: justify;"><span style="color: #000000;">To increase/rich the app content we are trying our best. We work restlessly to enrich the app&nbsp;considering&nbsp;your desire. You can suggest us to enrich the app with your desired contents. You can also support/donate us to encourage our activities.</span></p>
+
+<p><button class="button button1" onclick="myFunction0()">Communicate us</button></p>
+
+<div id="myDIV"></div>
+
+<script>
+function myFunction0() {
+  var x = document.getElementById("myDIV");
+  if (x.innerHTML === "") {
+    x.innerHTML = "Call us: <a href='tel:+8801770007177'>+8801770007177</a> <br> email: <a href='mailto:gentletouch2021@gmail.com'>gentletouch2021@gmail.com</a>";
+  } else {
+    x.innerHTML = "";
+  }
+}
+</script>
