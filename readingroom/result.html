@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+
+	<style type="text/css">
+		#container ul { list-style: none; margin:0; padding:0;}
+		#container .buttons { margin-bottom: 20px; }
+		#container .list li { width: 100%; border-bottom: 2px solid #444666; margin-bottom: 10px; padding-bottom: 10px; }
+		#container .grid li { float: left; width: 20%; height: 50px; border-right: 2px solid #CCC; border-bottom: 2px solid #CCC; padding: 20px; }
+		.acc{margin-top:3px; border:2px solid #ddd; display:block; padding:5px;}
+		.h{display:none;}
+		.v{display:block;}
+	</style>
+
+
+
+		<script type="text/javascript">
+				$(function(){
+					$('button').click(function(e) {
+						if($(this).hasClass('list')) {
+							 $('#container ul').removeClass('grid').addClass('list');
+							 $('ul li div').removeClass('h').addClass('v');
+						}
+						else if ($(this).hasClass('grid')) {
+						    $('#container ul').removeClass('list').addClass('grid'); 
+						    $('ul li div').removeClass('v').addClass('h');
+						}
+					});
+				}); 
+		</script>
+	</head>
+<body>
+
+<div id="container">
+	
+	<div class="buttons">
+	    <button class="grid">Grid View</button>
+	    <button class="list">List View</button>
+	</div>
+
+	<ul class="grid">
+	    <li><a class="box a" href="load.html">Education Board Results</a></li>
+	    <li><a class="box a" href="primary.html">PSC/PEC Exam Result</a></li>
+	    <li><a class="box a" href="nu.html">National University Results</a></li>
+	    
+
+	</ul>
+</div>
+
+</body>
+</html>
