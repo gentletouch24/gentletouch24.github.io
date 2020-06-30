@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.6.4.js'></script>
+<script type="text/javascript">
+               
+$(document).ready(function() {
+    var pressed = false;
+    var chars = [];
+    $(window).keypress(function(e) {
+                                chars.push(String.fromCharCode(e.which));
+                                if(e.which == null)
+                                {
+                                console.log("Something Happened");
+                                }
+        console.log(e.which + ":" + chars.join("|"));
+        if (pressed == false) {
+            setTimeout(function(){
+                if (chars.length >= 4) {
+                    var barcode = chars.join("");
+                    console.log("Barcode Scanned: " + barcode);
+                    // assign value to some input (or do whatever you want)
+                    document.getElementById("something").innerHTML = barcode;
+                }
+                chars = [];
+                pressed = false;
+            },500);
+        }
+        pressed = true;
+    });
+});
+$(document).keypress(function(e){
+    if ( e.which === 13 ) {
+        console.log("Prevent form submit.");
+        e.preventDefault();
+    }
+});
+ 
+ 
+</script>
+</head>
+<body>
+    <form>
+                                <label id="something"></label>
+                </form>
+</body>
+</html>
