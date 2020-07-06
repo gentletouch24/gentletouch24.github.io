@@ -45,8 +45,6 @@
     <table border="1" table rules="all" style="width:100%" id="myTable">
       <tr id="tr">
         <th>প্রশ্নকর্তার নাম</th>
-        <th>ফোন</th>
-        <th>ইমেইল</th>
         <th>লেভেল</th>
         <th>প্রশ্ন</th>
         <th>উত্তর</th>
@@ -62,8 +60,6 @@
             var val = data.val();
             content += '<tr>';
             content += '<td>' + val.name + '</td>';
-			content += '<td>' + val.phone + '</td>';            
-            content += '<td>' + val.email + '</td>';
             content += '<td>' + val.company + '</td>';
             content += '<td>' + val.message + '</td>';
             content += '<td>' + 'Hi ' + val.name + ',' + ' '+  val.ans + '</td>';
