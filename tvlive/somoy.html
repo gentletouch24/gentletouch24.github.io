@@ -1,47 +1,44 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Untitled Document</title>
-<style>
-body, html {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	overflow: hidden;
-}
-#content {
-	position:absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 0
-}
-#content iframe{
-	width:100%;
-	height:100%;
-	border:none;
-}
-@media screen and (orientation:portrait) {
-	body {
-		-webkit-transform: rotate(-90deg);
-		-webkit-transform-origin: 50% 50%;
-		transform: rotate(-90deg);
-		transform-origin: 50% 50%;
-	
-	}
-}
-</style>
-</head>
 
-<body>
-<div id="content">
-        <iframe src="https://www.youtube.com/embed/KgiwN7ddb2U?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allow="fullscreen">    </script>
-    </div>
-</body>
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="player"></div>
+
+    <script>
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '640',
+          width: '100%',
+          videoId: 'OGfNeaoYVaQ',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+     
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+  </body>
 </html>
-<!--
-<title>সময় টিভি</title>
- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KgiwN7ddb2U?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allow="fullscreen"></iframe>
--->
