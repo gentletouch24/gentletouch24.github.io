@@ -11,6 +11,29 @@
     
 <body>
 
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="https://gentletouch24.github.io/streaming/movie">Movies</a>
+  <a href="https://gentletouch24.github.io/streaming/drama">Dramas</a>
+  <a href="#https://gentletouch24.github.io/streaming/dramaseries">Drama Series</a>
+  <a href="#https://gentletouch24.github.io/streaming/songs">Songs</a>
+  <a href="https://gentletouch24.github.io/streaming/game">Games</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
 
 <!--slider starts-->
 <div class="slideshow-container">
