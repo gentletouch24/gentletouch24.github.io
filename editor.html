@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Editor</title>
+	<meta name="description" content="Try and test HTML code online in a simple and easy way using our free HTML editor and see the results in real-time." />
+		<meta charset="UTF-8" />
+	<meta property="og:title" content="HTML iFrame" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link type="image/x-icon" href="gtlogo.png" rel="shortcut icon" />
+	<link rel="stylesheet" href="https://www.tutorialrepublic.com/lib/editor-5.5/css/codemirror.css" />
+    <link rel="stylesheet" href="https://www.tutorialrepublic.com/lib/icomoon/style.css">
+	<link rel="stylesheet" href="https://www.tutorialrepublic.com/lib/editor-5.5/css/default-1.2.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://www.tutorialrepublic.com/lib/editor-5.5/js/codemirror.js"></script>
+	<script src="https://www.tutorialrepublic.com/lib/editor-5.5/js/utility.js"></script>
+	<script src="https://www.tutorialrepublic.com/lib/editor-5.5/mode/xml.js"></script>    
+	<script src="https://www.tutorialrepublic.com/lib/editor-5.5/mode/javascript.js"></script>
+	<script src="https://www.tutorialrepublic.com/lib/editor-5.5/mode/css.js"></script>
+	<script src="https://www.tutorialrepublic.com/lib/editor-5.5/mode/htmlmixed.js"></script>
+	<script src="https://www.tutorialrepublic.com/lib/editor-5.5/js/active-line.js"></script>
+	<script>
+		$(document).ready(function(){
+        	updatePreview();
+    	});    
+	</script>
+	<style>
+		.CodeMirror{font-size: 15px;line-height: normal;font-family: consolas,monospace;background: url("/lib/images/gutter-bg.gif") repeat-y -26px 0 transparent;}
+		.CodeMirror-activeline-background {background: #e8f2ff !important;}
+		.CodeMirror-scroll{overflow:auto;}
+		#carbonads{border: none !important;}
+	</style>
+	<!--Google Analytics-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40117907-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-40117907-1');
+</script>	<!--End:Google Analytics-->
+</head>
+<body>
+	<div class="header-wrapper">
+		<div class="header clearfix">
+			<div class="top-ad-box">
+				<script async src="https://www.tutorialrepublic.com//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Responsive Leaderboard -->
+<ins class="adsbygoogle"
+     style="display:block;width:100%;height:90px"
+     data-ad-client="ca-pub-9107540490929984"
+     data-ad-slot="4302666817"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>				<div id="carbon-block"></div>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src "https://www.tutorialrepublic.com//cdn.carbonads.com/carbon.js?serve=CE7D6K3M&placement=wwwtutorialrepubliccom";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+    var cssLink = document.createElement("link");
+    cssLink.rel = "stylesheet";
+    cssLink.href = "https://www.tutorialrepublic.com/lib/styles/carbon.css";
+    (document.getElementsByTagName("head")[0]).appendChild(cssLink);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>			</div>
+			<div class="logo">
+				<img src="gtlogo.png" alt="CodeLab" />
+			</div>
+			<div class="control-bar">
+				<div class="buttons">
+					<a onClick="updatePreview();" class="show-output">Show Output</a>
+					<a onClick="toggleView();" class="toggle-view" title="Change Editor Layout">Change Layout</span></a>
+				</div>                            
+			</div>               
+		</div>
+	</div>
+	<div class="frame-box vr">
+		<div class="pane-wrapper clearfix">
+			<div class="pane" id="code-pane">
+				<div class="outer-area">
+					<span class="show-preview-pane">&nbsp;</span>
+					<div class="inner-area">
+						<input type="hidden" id="current-code" name="current-code" />
+						<textarea id="code" name="code">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML iFrame&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;iframe src=&quot;https://gentletouch.github.io/&quot;&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>	
+						<script>
+							var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+								mode: "text/html",
+								tabMode: "indent",
+								styleActiveLine: true,
+								lineNumbers: true,
+								lineWrapping: true
+							});
+						</script>									
+					</div>
+				</div>
+			</div>
+			<div class="pane" id="preview-pane">
+				<div class="outer-wrapper">
+					<span class="hide-preview-pane">&nbsp;</span>
+					<div class="output-area">
+						<iframe id="preview" name="preview"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--
+	<div class="codelab-footer clearfix">		
+		<a href="https://www.tutorialrepublic.com/codelab.php?topic=sql&amp;file=select-all" class="switch-mode">Switch to SQL Mode</a>
+		<label class="auto-update"><input type="checkbox" id="check" /> Auto update</label>
+		<script>
+			var delay;
+			var checkbox = document.getElementById("check");
+			editor.on("change", function(){
+				editor.refresh();
+				if(checkbox.checked==true){            
+					clearTimeout(delay);
+					delay = setTimeout(updatePreview, 300); // Don't use parenthesis 
+				}
+			});
+			//setTimeout(updatePreview, 300);
+		</script>
+		
+	</div>
+        
+    <form id="download-form" action="https://www.tutorialrepublic.com/examples/bin/download.php" method="post" class="hidden-form">
+    	<input type="hidden" id="download-value" name="download-value" />
+    </form>
+    <form id="fullscreen-form" action="https://www.tutorialrepublic.com/examples/fullscreen/output.php" method="post" target="_blank" class="hidden-form">
+    	<input type="hidden" id="code-value" name="code-value" />
+    </form>
+-->
+</body>
+</html>
+
