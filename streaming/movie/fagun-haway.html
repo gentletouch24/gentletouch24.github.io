@@ -1,0 +1,28 @@
+
+ <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset=utf-8 />
+    <title>Live TV</title>
+       <link href="video-js.css" rel="stylesheet">
+	    <link rel="stylesheet" href="main-4.0.25.min.css">
+
+	   
+      <style>body{background: #fff;}</style><script src="video.js"></script>
+      <script src="videojs-contrib-hls.js"></script>
+       
+    </head>
+    <body>
+      <video id="playthis" class="video-js vjs-fluid vjs-default-skin" controls preload="auto" data-setup='{}'>
+        <source src="https://vod.bioscopelive.com/vod/vod/M/C/MCnu7IQU7zC/MCnu7IQU7zC.m3u8" type="application/x-mpegURL">
+      </video>
+      
+    <script>
+    var player = videojs('playthis');
+    player.play();
+    </script>
+      <br><hr/>
+<br><hr/>
+      <h4>Disclaimer:</h4> <h5>This app doesn't have it's own server. It plays videos from Third party's website.</h5>
+    </body>
+    </html>
