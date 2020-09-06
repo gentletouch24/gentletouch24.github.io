@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset=utf-8 />
+    <title>Live TV</title>
+       <link href="../video-js.css" rel="stylesheet">
+	    <link rel="stylesheet" href="../main-4.0.25.min.css">
+
+	   
+      <style>body{background: #fff;}</style><script src="../video.js"></script>
+      <script src="../videojs-contrib-hls.js"></script>
+       
+    </head>
+    <body>
+      <video id="playthis" class="video-js vjs-fluid vjs-default-skin" controls preload="auto" data-setup='{}'>
+        <source src="https://edge4.bioscopelive.com/hls/anonymous/kFwjnN7kgbC7xz8HQkXqzg/1599402275/sangsad_tv.m3u8" type="application/x-mpegURL">
+      </video>
+      
+    <script>
+    var player = videojs('playthis');
+    player.play();
+    </script>
+      
+      </html>
