@@ -1,55 +1,18 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-	<head>
-	<meta charset="UTF-8">
-	<title></title>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
+<html>
+<head>
+<title>Reading Room</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
 
-	<style type="text/css">
-		#container ul { list-style: none; margin:0; padding:0;}
-		#container .buttons { margin-bottom: 20px; }
-		#container .list li { width: 100%; border-bottom: 2px solid #444666; margin-bottom: 10px; padding-bottom: 10px; }
-		#container .grid li { float: left; width: 20%; height: 50px; border-right: 2px solid #CCC; border-bottom: 2px solid #CCC; padding: 20px; }
-		.acc{margin-top:3px; border:2px solid #ddd; display:block; padding:5px;}
-		.h{display:none;}
-		.v{display:block;}
-	</style>
-
-
-
-		<script type="text/javascript">
-				$(function(){
-					$('button').click(function(e) {
-						if($(this).hasClass('list')) {
-							 $('#container ul').removeClass('grid').addClass('list');
-							 $('ul li div').removeClass('h').addClass('v');
-						}
-						else if ($(this).hasClass('grid')) {
-						    $('#container ul').removeClass('list').addClass('grid'); 
-						    $('ul li div').removeClass('v').addClass('h');
-						}
-					});
-				}); 
-		</script>
-	</head>
+</head>
 <body>
+<a href="lll.html">Back</a>
 
-<div id="container">
-	
-	<div class="buttons">
-	    <button class="grid">Grid View</button>
-	    <button class="list">List View</button>
-	</div>
-
-	<ul class="grid">
-	    <li><a class="box a" href="http://www.educationboardresults.gov.bd/">Education Board Results</a></li>
-	    <li><a class="box a" href="http://dperesult.teletalk.com.bd/dpe.php">PSC/PEC Exam Result</a></li>
-	    <li><a class="box a" href="http://www.nu.ac.bd/results/">National University Results</a></li>
-	    
-
-	</ul>
-</div>
-
+<h2 style="text-align: center;"><span style="color: #339966;">Select Your Item</span></h2>
+<a href="http://www.educationboardresults.gov.bd/" class="button"><figure><img src="ssc.jpg"></figure><div class="text">Education Board Results</div></a>
+<a href="http://dperesult.teletalk.com.bd/dpe.php" class="button"><figure><img src="nu.jpg"></figure><div class="text">PSC/PEC Exam Result</div></a>
+<a href="http://www.nu.ac.bd/results/" class="button"><figure><img src="psc.jpg"></figure><div class="text">National University Results</div></a>
 </body>
+
 </html>
