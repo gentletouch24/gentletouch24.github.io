@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+$(".clickbox").click(function(){
+     window.location=$(this).find("a").attr("href"); 
+     return false;
+ });
+</script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: pink;
+}
+.clickbox {
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align: center;"><span style="color: #800000;">মাধ্যমিক রসায়ন বিজ্ঞান (MCQ)</span></h2>
+
+<div class="row">
+  <div class="column">
+    <div class="card" onclick="window.location.href='index1.html';">
+      <h3>অধ্যায়-১</h3>
+      <p>রসায়নের ধারণা</p>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" onclick="window.location.href='index2.html';">
+      <h3>অধ্যায়-২</h3>
+      <p>পদার্থের অবস্থা</p>
+      <p></p>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card" onclick="window.location.href='index3.html';">
+      <h3>অধ্যায়-৩</h3>
+      <p>পদার্থের গঠন</p>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" onclick="window.location.href='index4.html';">
+      <h3>অধ্যায়-৪</h3>
+      <p>পর্যায় সারণী</p>
+      <p></p>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card" onclick="window.location.href='index5.html';">
+      <h3>অধ্যায়-৫</h3>
+      <p>রাসায়নিক বন্ধন</p>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" onclick="window.location.href='index6.html';">
+      <h3>অধ্যায়-৬</h3>
+      <p>মৌলের ধারণা ও রাসায়নিক গণনা</p>
+      <p></p>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="column">
+    <div class="card" onclick="window.location.href='index7.html';">
+      <h3>অধ্যায়-৭</h3>
+      <p>রাসায়নিক বিক্রিয়া</p>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" onclick="window.location.href='index8.html';">
+      <h3>অধ্যায়-৮</h3>
+      <p>রসায়ন ও শক্তি</p>
+      <p></p>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card" onclick="window.location.href='index9.html';">
+      <h3>অধ্যায়-৯</h3>
+      <p>এসিড, ক্ষার ও সমতা</p>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" onclick="window.location.href='index10.html';">
+      <h3>অধ্যায়-১০</h3>
+      <p>খনিজ সম্পদ (ধাতু ও অধাতু)</p>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card" onclick="window.location.href='index11.html';">
+      <h3>অধ্যায়-১১</h3>
+      <p>খনিজ সম্পদ-জীবাশ্ম</p>
+      
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" onclick="window.location.href='index12.html';">
+      <h3>অধ্যায়-১২</h3>
+      <p>আমাদের জীবনে রসায়ন</p>
+      <p></p>
+    </div>
+  </div>
+</div>
+<br>
+
+</body>
+</html>
