@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width , initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+		<link rel="stylesheet" type="text/css" href="style2.css">
+  
+  
+  
+    <title>Question & Answer</title>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   
+    <script>
+        var firebaseConfig = {
+    apiKey: "AIzaSyAHtAc5AzgXFrB7BlFSle4Y3DXF9KvEgvU",
+  authDomain: "fir-dbtest-c7e30.firebaseapp.com",
+  databaseURL: "https://fir-dbtest-c7e30.firebaseio.com",
+  projectId: "fir-dbtest-c7e30",
+  storageBucket: "fir-dbtest-c7e30.appspot.com",
+  messagingSenderId: "173991106019",
+  appId: "1:173991106019:web:d583c98ce8874c1ecd3cd6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    </script>
+
+	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+
+
+<body>
+  <br>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+  
+  <h4 style="text-align: center;"><span style="color: #800000;">প্রশ্নোত্তর সমূহ</span></h4> 
+  <div style="overflow-x:auto;">
+    <table border="1" table rules="all" style="width:100%" id="myTable">
+      <tr id="tr">
+        <th>প্রশ্নকর্তার নাম</th>
+        <th>লেভেল</th>
+        <th>প্রশ্ন</th>
+        <th>উত্তর</th>
+      </tr>
+	
+
+    <script>
+      var database = firebase.database();
+      database.ref('qus-ans2').once('value', function(snapshot) {
+        if (snapshot.exists()) {
+          var content = '';
+          snapshot.forEach(function(data) {
+            var val = data.val();
+            content += '<tr>';
+            content += '<td>' + val.name + '</td>';
+            content += '<td>' + val.company + '</td>';
+            content += '<td>' + val.message + '</td>';
+            content += '<td>' + 'Hi ' + val.name + ',' + ' '+  val.ans + '</td>';
+            content += '</tr>';
+          });
+          $('#myTable').append(content);
+        }
+      });
+    </script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		
+		<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+	</body>
+</html>
+	
