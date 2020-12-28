@@ -1,4 +1,23 @@
+<script type="text/javascript">
+var omitformtags=["input", "textarea", "select"]
+omitformtags=omitformtags.join("|")
+function disableselect(e){
+if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+return false
+}
+function reEnable(){
+return true
+}
+if (typeof document.onselectstart!="undefined")
+document.onselectstart=new Function ("return false")
+else{
+document.onmousedown=disableselect
+document.onmouseup=reEnable
+}
 
+</script>
+
+<title>Du B Unit</title>
 <h1 style="text-align: center;"><span style="color: #993366;"><strong>ঢাকা বিশ্ববিদ্যালয় ভর্তি পরীক্ষা খ ইউনিটঃ ২০১৩-২০১৪</strong></span></h1>
 <h3 align="center">&nbsp;</h3>
 <h3 align="center"><span style="color: #ff0000;">English</span></h3>
