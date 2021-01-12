@@ -1,11 +1,12 @@
 // Initialize Firebase (ADD YOUR OWN DATA)
 var config = {
-    apiKey: "AIzaSyAHtAc5AzgXFrB7BlFSle4Y3DXF9KvEgvU",
-    authDomain: "fir-dbtest-c7e30.firebaseapp.com",
-    databaseURL: "https://fir-dbtest-c7e30.firebaseio.com",
-    projectId: "fir-dbtest-c7e30",
-    storageBucket: "fir-dbtest-c7e30.appspot.com",
-    messagingSenderId: "173991106019",
+    apiKey: "AIzaSyCj6Q8VAdY3PvT_mxK43iZePLmXr23qE24",
+    authDomain: "fireapp-a0429.firebaseapp.com",
+    databaseURL: "https://fireapp-a0429.firebaseio.com",
+    projectId: "fireapp-a0429",
+    storageBucket: "fireapp-a0429.appspot.com",
+    messagingSenderId: "164590013569",
+    appId: "1:164590013569:web:c214b7366f9d8f1dcb9180"
 };
 firebase.initializeApp(config);
 
